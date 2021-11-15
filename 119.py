@@ -14,8 +14,11 @@ def ran():
         big = input("Please Enter the big number: ")
     
     big = int(big)
-
-    comp_num = random.randint(small, big)
+    
+    if small < big:
+        comp_num = random.randint(small, big)
+    else:
+        comp_num = random.randint(big, small)
     
     return comp_num    
 
@@ -39,7 +42,7 @@ def game():
     while True:
         
         if randomNumber == choise:
-            print("Correct, you are win. The coorect number - " + str(choise))
+            print("Correct, you are win. The coorect number - " + str(randomNumber))
             return
         
         if randomNumber > choise:
@@ -52,7 +55,7 @@ def game():
             choise = think()
             continue
 
-game()                
+game()
     
         
 

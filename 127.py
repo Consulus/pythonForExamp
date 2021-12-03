@@ -4,17 +4,24 @@ window = Tk()
 window.title("String concat")
 window.geometry("500x200")
 
+result = ""
+
 def Add():
+    global result
     string = entry.get()
-    output["text"] = string
+    result = result + string + ' ' 
+    output["text"] = result
+    entry.delete(0, END)
     
 def Clear():
-    output["text"] = ""
+    global result
+    result = ""
+    output["text"] = result
 
 entry = Entry(text = "")
 entry.place(x=20, y=30, width=200, height=30)
 
-output = Message(text="")
+output = Label(text=result)
 output.place(x=230, y=30, width=200, height=30)
 output["bg"] = "white"
 

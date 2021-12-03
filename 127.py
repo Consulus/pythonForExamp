@@ -17,8 +17,6 @@ entry.place(x=20, y=30, width=200, height=30)
 output = Message(text="")
 output.place(x=230, y=30, width=200, height=30)
 output["bg"] = "white"
-output["justify"] = "left"
-output["pady"] = "0"
 
 btnAdd = Button(text="add", command=Add)
 btnAdd.place(x=20, y=70, width=200, height=30)
